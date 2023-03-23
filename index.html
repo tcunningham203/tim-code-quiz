@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div class="intro" id="welcome"> 
-        <h1>
-            Test your Javascript knowledge with this 5 question quiz. You have 70 seconds to answer the questions. You will recieve a 10 second penalty for each incorrect answer. At the end, your remaining time is your score.
 
-            
+<body>
+    <div class="intro" id="welcome">
+        <h1>
+            Test your Javascript knowledge with this 5 question quiz. You have 70 seconds to answer the questions. You
+            will recieve a 10 second penalty for each incorrect answer. At the end, your remaining time is your score.
+
+
         </h1>
         <button class="start-button" id="start-button">Start Quiz</button>
         <button class="high-scores-button" id="high-scores-button">View High Scores</button>
     </div>
 
-</div>
-<div class="question" id="question">
-    Question goes here.
-</div>
-<div class="choices" id="choices">
-    <button class="option" onclick="" id="btnA" >A</button>
+    </div>
+    <div class="quiz-container" id="quiz" style="display: none;">
+        <div class="question" id="question">
+            Q placeholder
+        </div>
+        <div class="all-choices" id="choices">
+            <button class="choice" id="btnA">A</button>
 
-    <button class="option" id="btnB" >B</button>
+            <button class="choice" id="btnB">B</button>
 
-    <button class="option" id="btnC">C</button>
+            <button class="choice" id="btnC">C</button>
 
-    <button class="option" id="btnD">D</button>
-</div>
-  
+            <button class="choice" id="btnD">D</button>
+        </div>
+    </div>
 
 
 
-    <script src= "./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>

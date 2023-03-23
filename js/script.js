@@ -1,25 +1,42 @@
 // Buttons
 var startButton = document.getElementById("start-button");
 var highScoresButton = document.getElementById("high-scores-button");
+
+// instructions when you open the page
 var introPage = document.getElementById("welcome");
 
+// display question
+var question = document.getElementById("question");
+
+// choice buttons for quiz
+var btnA = document.getElementById('btnA')
+var btnB = document.getElementById('btnB')
+var btnC = document.getElementById('btnC')
+var btnD = document.getElementById('btnD')
+
+// hide/reveal the quiz part when you open the page
+var quizAll = document.getElementById("quiz");
+
 //event listener for start button
-startButton.addEventListener("click", startGame);
+startButton.addEventListener("click", startQuiz);
 
 //event listener for high score button
 highScoresButton.addEventListener("click", highScores);
 
-//function to start the game
-function startGame() {
+//function to start the quiz
+function startQuiz() {
 startButton.remove();
 highScoresButton.remove();
+quizAll.style.display = "block";
 introPage.remove();
-console.log("hello"); 
+console.log("Pressed Start Quiz"); 
+var id = 0
+askQuestion(id);
 };
 
 
 function highScores() {
-console.log("hello2"); 
+console.log("Pressed High Scores"); 
 
 
 };
@@ -45,7 +62,6 @@ var quizQuestions = [{
     ]
 
 },
-
 {
     id: 2,
     q: "Arrays in Javascript can be used to store ______.",
@@ -77,3 +93,67 @@ var quizQuestions = [{
 
 }
 ]
+
+function askQuestion(id){
+question.innerText = quizQuestions[id].q;
+btnA.innerText = quizQuestions[id].a[0].text
+btnB.innerText = quizQuestions[id].a[1].text
+btnC.innerText = quizQuestions[id].a[2].text
+btnD.innerText = quizQuestions[id].a[3].text
+
+btnA.value = quizQuestions[id].a[0].isCorrect;
+btnB.value = quizQuestions[id].a[1].isCorrect;
+btnC.value = quizQuestions[id].a[2].isCorrect;
+btnD.value = quizQuestions[id].a[3].isCorrect;
+
+//The value the user chooses
+var myAnswer = ""
+
+// event listeners for answers
+btnA.addEventListener("click", () => {
+    myAnswer = btnA.value
+    if (myAnswer == true) {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("test")
+    }
+    
+
+})
+btnB.addEventListener("click", () => {
+    myAnswer = btnB.value
+    if (myAnswer == true) {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("test")
+    }
+
+
+})
+btnC.addEventListener("click", () => {
+    myAnswer = btnC.value
+    if (myAnswer == true) {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("test")
+    }
+
+
+})
+btnD.addEventListener("click", () => {
+    myAnswer = btnD.value
+
+    if (myAnswer == true) {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("test")
+    }
+
+})
+
+
+}
