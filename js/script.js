@@ -1,3 +1,29 @@
+// Buttons
+var startButton = document.getElementById("start-button");
+var highScoresButton = document.getElementById("high-scores-button");
+var introPage = document.getElementById("welcome");
+
+//event listener for start button
+startButton.addEventListener("click", startGame);
+
+//event listener for high score button
+highScoresButton.addEventListener("click", highScores);
+
+//function to start the game
+function startGame() {
+startButton.remove();
+highScoresButton.remove();
+introPage.remove();
+console.log("hello"); 
+};
+
+
+function highScores() {
+console.log("hello2"); 
+
+
+};
+
 // The questions 
 var quizQuestions = [{
     id: 0,
