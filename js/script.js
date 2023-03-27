@@ -1,9 +1,15 @@
+// Timer
+var timerCount;
+
+
 // Buttons
 var startButton = document.getElementById("start-button");
 var highScoresButton = document.getElementById("high-scores-button");
 
-// instructions when you open the page
+// header stuff when you open the page
 var introPage = document.getElementById("welcome");
+var introText = document.getElementById("welcome-text");
+var resultText = document.getElementById("result-text");
 
 // display question
 var question = document.getElementById("question");
@@ -23,17 +29,26 @@ startButton.addEventListener("click", startQuiz);
 //event listener for high score button
 highScoresButton.addEventListener("click", highScores);
 
+var id = 0
 //function to start the quiz
 function startQuiz() {
-startButton.remove();
-highScoresButton.remove();
+    
 quizAll.style.display = "block";
-introPage.remove();
+introPage.style.display = 'none';
+introText.style.display = "none";
+id = 0
 console.log("Pressed Start Quiz"); 
-var id = 0
 askQuestion(id);
+return
 };
 
+function finishQuiz() {
+    
+    introPage.style.display = 'block';
+    quizAll.style.display = "none";
+    resultText.style.display = "block";
+    console.log("Pressed Finish Quiz"); 
+    };
 
 function highScores() {
 console.log("Pressed High Scores"); 
@@ -91,6 +106,16 @@ var quizQuestions = [{
         { text: "console.log", isCorrect: true }
     ]
 
+},
+{
+    id: 5,
+    q: "",
+    a: [{ text: "", isCorrect: false },
+        { text: "", isCorrect: false },
+        { text: "", isCorrect: false },
+        { text: "", isCorrect: false }
+    ]
+
 }
 ]
 
@@ -105,55 +130,95 @@ btnA.value = quizQuestions[id].a[0].isCorrect;
 btnB.value = quizQuestions[id].a[1].isCorrect;
 btnC.value = quizQuestions[id].a[2].isCorrect;
 btnD.value = quizQuestions[id].a[3].isCorrect;
-
+}
 //The value the user chooses
 var myAnswer = ""
 
 // event listeners for answers
 btnA.addEventListener("click", () => {
     myAnswer = btnA.value
-    if (myAnswer == true) {
+   
+   
+    if (myAnswer == "true" && id < 5) {
         id++;
         askQuestion(id);
         console.log(id);
-        console.log("test")
+        console.log("true")
     }
     
-
+    if (myAnswer == "false" && id < 5) {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("false")
+    }
+    if (id == 5){
+        console.log("end result");
+        finishQuiz();
+    }
 })
 btnB.addEventListener("click", () => {
     myAnswer = btnB.value
-    if (myAnswer == true) {
+    if (myAnswer == "true") {
         id++;
         askQuestion(id);
         console.log(id);
-        console.log("test")
+        console.log("true")
     }
-
+    
+if (myAnswer == "false") {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("false")
+    }
+    if (id == 5){
+        console.log("end result");
+        finishQuiz();
+    }
 
 })
 btnC.addEventListener("click", () => {
     myAnswer = btnC.value
-    if (myAnswer == true) {
+    if (myAnswer == "true") {
         id++;
         askQuestion(id);
         console.log(id);
-        console.log("test")
+        console.log("true")
     }
-
+    
+if (myAnswer == "false") {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("false")
+    }
+    if (id == 5){
+        console.log("end result");
+        finishQuiz();
+    }
 
 })
 btnD.addEventListener("click", () => {
     myAnswer = btnD.value
 
-    if (myAnswer == true) {
+    if (myAnswer == "true") {
         id++;
         askQuestion(id);
         console.log(id);
-        console.log("test")
+        console.log("true")
     }
-
+    
+if (myAnswer == "false") {
+        id++;
+        askQuestion(id);
+        console.log(id);
+        console.log("false")
+    }
+    if (id == 5){
+        console.log("end result");
+        finishQuiz();
+    }
 })
 
 
-}

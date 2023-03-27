@@ -9,15 +9,22 @@
 </head>
 
 <body>
-    <div class="intro" id="welcome">
+    <div class="intro" id="welcome" style="display: block;">
+        <div class="intro-container" id="welcome-text" style="display: block;">
         <h1>
             Test your Javascript knowledge with this 5 question quiz. You have 70 seconds to answer the questions. You
             will recieve a 10 second penalty for each incorrect answer. At the end, your remaining time is your score.
-
-
         </h1>
-        <button class="start-button" id="start-button">Start Quiz</button>
-        <button class="high-scores-button" id="high-scores-button">View High Scores</button>
+        
+        </div>
+        <div class="result-container" id="result-text" style="display: none;">
+            <h1>
+                You finished! Here is your score:
+            </h1>
+            
+            </div>
+        <button class="start-button" id="start-button" style="display: block;">Start Quiz</button>
+        <button class="high-scores-button" id="high-scores-button" style="display: block;">View High Scores</button>
     </div>
 
     </div>
