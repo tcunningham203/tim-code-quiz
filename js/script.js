@@ -1,6 +1,6 @@
 // Timer
-var timerCount;
-
+var timerStart = 100;
+var timerInterval;
 
 // Buttons
 var startButton = document.getElementById("start-button");
@@ -15,21 +15,23 @@ var resultText = document.getElementById("result-text");
 var question = document.getElementById("question");
 
 // choice buttons for quiz
-var btnA = document.getElementById('btnA')
-var btnB = document.getElementById('btnB')
-var btnC = document.getElementById('btnC')
-var btnD = document.getElementById('btnD')
+var btnA = document.getElementById('btnA');
+var btnB = document.getElementById('btnB');
+var btnC = document.getElementById('btnC');
+var btnD = document.getElementById('btnD');
 
 // hide/reveal the quiz part when you open the page
 var quizAll = document.getElementById("quiz");
+
 
 //event listener for start button
 startButton.addEventListener("click", startQuiz);
 
 //event listener for high score button
+var highScoresList;
 highScoresButton.addEventListener("click", highScores);
 
-var id = 0
+var id = 0;
 //function to start the quiz
 function startQuiz() {
     
