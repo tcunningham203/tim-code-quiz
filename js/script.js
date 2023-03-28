@@ -1,6 +1,46 @@
 // Timer
-var timerStart = 100;
+var timer;
+var timerCount;
 var timerInterval;
+var timerElement = document.getElementById("timer");
+
+
+// As mentioned in the readme, I used the miniproject for this module as a reference for how to create the timer.
+function startTimer() {
+    // Sets timer
+    timer = setInterval(function() {
+      timerCount--;
+      timerElement.textContent = timerCount;
+      if (timerCount >= 0) {
+        // Tests if win condition is met
+        if (id == 5 && timerCount > 0) {
+          // Clears interval and stops timer
+          clearInterval(timer);
+          winGame();
+        }
+      }
+      // Tests if time has run out
+      if (timerCount === 0) {
+        // Clears interval
+        clearInterval(timer);
+        loseGame();
+        timerCount = 0;
+        timerElement.textContent = timerCount;
+      } 
+      // If the time goes into the negatives
+      if (timerCount < 0) {
+        
+        // Clears interval
+        clearInterval(timer);
+        loseGame();
+        timerCount = 0;
+        timerElement.textContent = timerCount;
+      }
+    }, 1000);
+  }
+
+ 
+
 
 // Buttons
 var startButton = document.getElementById("start-button");
@@ -9,7 +49,14 @@ var highScoresButton = document.getElementById("high-scores-button");
 // header stuff when you open the page
 var introPage = document.getElementById("welcome");
 var introText = document.getElementById("welcome-text");
+
+//win or lose result
 var resultText = document.getElementById("result-text");
+var loseText = document.getElementById("lose-text");
+
+//result between questions
+var yesText = document.getElementById("yes-text");
+var noText = document.getElementById("no-text");
 
 // display question
 var question = document.getElementById("question");
@@ -32,16 +79,18 @@ var highScoresList;
 highScoresButton.addEventListener("click", highScores);
 
 var id = 0;
+
+
 //function to start the quiz
 function startQuiz() {
-    
+timerCount = 5;
 quizAll.style.display = "block";
 introPage.style.display = 'none';
 introText.style.display = "none";
 id = 0
 console.log("Pressed Start Quiz"); 
 askQuestion(id);
-return
+startTimer()
 };
 
 function finishQuiz() {
@@ -49,14 +98,24 @@ function finishQuiz() {
     introPage.style.display = 'block';
     quizAll.style.display = "none";
     resultText.style.display = "block";
+    loseText.style.display = "none";
     console.log("Pressed Finish Quiz"); 
     };
 
 function highScores() {
 console.log("Pressed High Scores"); 
-
-
 };
+
+
+function loseGame() {
+    introPage.style.display = 'block';
+    loseText.style.display = "block";
+    quizAll.style.display = "none";
+    resultText.style.display = "none";
+    console.log("You Ran Out Of Time!"); 
+    };
+
+
 
 // The questions 
 var quizQuestions = [{

@@ -112,8 +112,8 @@ header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(86, 29, 133);
     color: rgb(255, 158, 255);
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
     
 }
 
@@ -122,6 +122,16 @@ li.title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+li#score.timer {
+    font-size: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(86, 29, 133);
+    color: rgb(202, 202, 202);
+    padding-left: 1%;
+    padding-right: 1%;
+    
+}
 
 li#timer.timer {
     font-size: 20px;
@@ -129,8 +139,12 @@ li#timer.timer {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: rgb(86, 29, 133);
     color: rgb(202, 202, 202);
+    padding-left: 0%;
+    padding-right: 1%;
     
 }
+
+
 
 .nav-header li {
 
