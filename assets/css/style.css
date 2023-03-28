@@ -7,10 +7,11 @@ body {
     justify-content: center;
     text-align: center;
     padding-left: 0;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
+    font-size: 30px;
+    color: rgb(180, 180, 180);
     padding: 0px;
     margin-top: 0px;
+    background-color: rgb(23, 14, 48);
 
 }
 
@@ -26,47 +27,66 @@ body {
 .quiz-container {
 
     display: flex;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
 
 
 }
 
 header {
-    background-color: rgb(145, 255, 255);
+    background-color: rgb(113, 39, 173);
     padding: 0%;
-
-
+    box-shadow: 0px 10px;
+    color: rgb(0, 0, 0);
 
 }
 .question{
 
-    background-color: rgb(145, 255, 255);
-    padding: 10%;
+    background-color: rgb(141, 114, 206);
+    padding: 5%;
     margin: 2%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     justify-content: center;
     text-align: center;
-    font-size: 20px;
+    font-size: 50px;
     color: rgb(0, 0, 0);
-    
+    border-radius: 25px;
+    box-shadow: 10px 10px;
 }
 
 
+.start-button{
 
-.choice{
-
-    background-color: rgb(145, 255, 255);
+    background-color: rgb(68, 21, 68);
     padding: 0%;
     margin: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     justify-content: center;
     text-align: center;
     padding-left: 0;
-    font-size: 20px;
-    color: rgb(0, 0, 0);
+    font-size: 40px;
+    color: rgb(228, 228, 228);
     padding: 20px;
     margin-top: 0px;
+    border-radius: 25px;
+}
+
+
+.choice{
+
+    background-color: rgb(0, 0, 0);
+    padding: 0%;
+    margin: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 14px;
+    border-radius: 25px;
+    width: 300px;
 }
 
 
@@ -78,17 +98,23 @@ header {
     justify-content: center;
     text-align: center;
     padding-left: 0;
+    padding-bottom: 20px;
     font-size: 20px;
-    color: rgb(0, 0, 0);
-    padding: 0px;
+    color: rgb(202, 202, 202);
     margin-top: 0px;
+    width: 100%;
 
 }
 
 
 #high-scores-button.highscores {
-    font-size: 40px;
+    font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(86, 29, 133);
+    color: rgb(255, 158, 255);
+    padding-left: 2%;
+    padding-right: 2%;
+    
 }
 
 li.title {
@@ -98,9 +124,12 @@ li.title {
 
 
 li#timer.timer {
-    font-size: 40px;
+    font-size: 20px;
+    text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    background-color: rgb(86, 29, 133);
+    color: rgb(202, 202, 202);
+    
 }
 
 .nav-header li {
@@ -110,4 +139,31 @@ li#timer.timer {
     padding-right: 5%;
 
 
+}
+li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    appearance: auto;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: transparent;
+    border-image: initial;
 }
