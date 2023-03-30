@@ -144,6 +144,29 @@ li#timer.timer {
     
 }
 
+#yes-text.result-container3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 255, 0);
+    padding-left: 0%;
+    padding-right: 1%;
+    
+}
+
+
+
+
+#no-text.result-container4 {
+    font-size: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(253, 0, 0);
+    padding-left: 0%;
+    padding-right: 1%;
+    
+}
+
 
 
 .nav-header li {

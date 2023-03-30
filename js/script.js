@@ -83,7 +83,7 @@ var id = 0;
 
 //function to start the quiz
 function startQuiz() {
-timerCount = 5;
+timerCount = 70;
 quizAll.style.display = "block";
 introPage.style.display = 'none';
 introText.style.display = "none";
@@ -102,6 +102,7 @@ function finishQuiz() {
     console.log("Pressed Finish Quiz"); 
     };
 
+    
 function highScores() {
 console.log("Pressed High Scores"); 
 };
@@ -195,23 +196,53 @@ btnD.value = quizQuestions[id].a[3].isCorrect;
 //The value the user chooses
 var myAnswer = ""
 
+
+
+// correct and wrong answer message fade
+
+function yesTextFade(){
+    yesText.style.display = "block"
+    yesText.style.transition = 'none';
+    yesText.style.opacity = '1';
+    void yesText.offsetWidth;
+    yesText.style.transition = 'opacity 1.5s';
+    yesText.style.opacity = '0';
+   
+}
+
+function noTextFade(){
+    noText.style.display = "block"
+    noText.style.transition = 'none';
+    noText.style.opacity = '1';
+    void noText.offsetWidth;
+    noText.style.transition = 'opacity 1.5s';
+    noText.style.opacity = '0';
+}
+
 // event listeners for answers
 btnA.addEventListener("click", () => {
     myAnswer = btnA.value
    
    
     if (myAnswer == "true" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
         id++;
         askQuestion(id);
         console.log(id);
         console.log("true")
+        yesTextFade()
     }
     
     if (myAnswer == "false" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
+        timerCount = timerCount -10
         id++;
         askQuestion(id);
         console.log(id);
         console.log("false")
+        noTextFade()
     }
     if (id == 5){
         console.log("end result");
@@ -220,18 +251,25 @@ btnA.addEventListener("click", () => {
 })
 btnB.addEventListener("click", () => {
     myAnswer = btnB.value
-    if (myAnswer == "true") {
+    if (myAnswer == "true" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
         id++;
         askQuestion(id);
         console.log(id);
         console.log("true")
+        yesTextFade()
     }
     
-if (myAnswer == "false") {
+    if (myAnswer == "false" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
+        timerCount = timerCount -10
         id++;
         askQuestion(id);
         console.log(id);
         console.log("false")
+        noTextFade()
     }
     if (id == 5){
         console.log("end result");
@@ -241,18 +279,25 @@ if (myAnswer == "false") {
 })
 btnC.addEventListener("click", () => {
     myAnswer = btnC.value
-    if (myAnswer == "true") {
+    if (myAnswer == "true" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
         id++;
         askQuestion(id);
         console.log(id);
         console.log("true")
+        yesTextFade()
     }
     
-if (myAnswer == "false") {
+    if (myAnswer == "false" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
+        timerCount = timerCount -10
         id++;
         askQuestion(id);
         console.log(id);
         console.log("false")
+        noTextFade()
     }
     if (id == 5){
         console.log("end result");
@@ -263,18 +308,25 @@ if (myAnswer == "false") {
 btnD.addEventListener("click", () => {
     myAnswer = btnD.value
 
-    if (myAnswer == "true") {
+    if (myAnswer == "true" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
         id++;
         askQuestion(id);
         console.log(id);
         console.log("true")
+        yesTextFade()
     }
     
-if (myAnswer == "false") {
+    if (myAnswer == "false" && id < 5) {
+        noText.style.display = "none"
+        yesText.style.display = "none"
+        timerCount = timerCount -10
         id++;
         askQuestion(id);
         console.log(id);
         console.log("false")
+        noTextFade()
     }
     if (id == 5){
         console.log("end result");
