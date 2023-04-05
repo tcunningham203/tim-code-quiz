@@ -19,7 +19,7 @@ https://tcunningham203.github.io/tim-code-quiz/
 
 ## Screenshot
 
-This is what the website looks like when you open it.
+This is what the application looks like when you open it.
 
 ![AppScreenshot1](/assets/screenshots/website-screenshot.png?raw=true "Screenshot of Deployed Application- Instruction Screen")
 
